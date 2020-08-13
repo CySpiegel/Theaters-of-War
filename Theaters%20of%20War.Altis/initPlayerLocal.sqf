@@ -1,3 +1,6 @@
+params ["_newUnit", "_oldUnit"];
+
+
 // Ace Fortification ALiVE Database saving system
 ["acex_fortify_objectPlaced", {
 	[ALiVE_SYS_LOGISTICS, "updateObject", [(_this select 2)]] call ALIVE_fnc_logistics;

@@ -518,15 +518,15 @@ acre_sys_zeus_zeusCommunicateViaCamera = true;
 acre_sys_zeus_zeusDefaultVoiceSource = false;
 
 // ADV - ACE CPR
-force force adv_aceCPR_addTime = 24.8733;
+force force adv_aceCPR_addTime = 20;
 force force adv_aceCPR_AED_stationType = """Land_Defibrillator_F""";
-force force adv_aceCPR_chance_0 = 5;
-force force adv_aceCPR_chance_1 = 15;
-force force adv_aceCPR_chance_2 = 40;
+force force adv_aceCPR_chance_0 = 49.7159;
+force force adv_aceCPR_chance_1 = 61.5531;
+force force adv_aceCPR_chance_2 = 70.1618;
 force force adv_aceCPR_chance_aed = 85;
 force force adv_aceCPR_enable = true;
 force force adv_aceCPR_maxTime = 1200;
-force force adv_aceCPR_onlyDoctors = 0;
+force force adv_aceCPR_onlyDoctors = 1;
 force force adv_aceCPR_useLocation_AED = 0;
 
 // AI
@@ -561,6 +561,32 @@ FARE_STATE_ACE_MENU = true;
 FARE_STATE_DAYTIME = true;
 FARE_STATE_GEAR = true;
 FARE_STATE_MEDICAL = true;
+
+// AWESome Aerodynamics
+force force orbis_aerodynamics_enabled = true;
+force force orbis_aerodynamics_pylonDragMultiplierGlobal = 1;
+force force orbis_aerodynamics_pylonMassMultiplierGlobal = 1;
+force force orbis_aerodynamics_windMultiplier = 1;
+
+// AWESome ATC
+orbis_atc_displayCallsign = 0;
+orbis_atc_displayProjectileTrails = false;
+force force orbis_atc_radarTrailLength = 5;
+force force orbis_atc_radarUpdateInterval = 0.5;
+orbis_atc_realtimeATIS = true;
+orbis_atc_unitSettingAlt = false;
+orbis_atc_unitSettingSpd = false;
+
+// AWESome Cockpit
+orbis_cockpit_checklistUnits = "KIAS";
+orbis_cockpit_groundMultiplier = 1;
+orbis_cockpit_shakeEnabled = true;
+orbis_cockpit_speedMultiplier = 1;
+
+// AWESome GPWS
+orbis_gpws_automaticTransponder = true;
+orbis_gpws_defaultVolumeLow = false;
+orbis_gpws_personalDefault = "none";
 
 // CBA UI
 cba_ui_notifyLifetime = 4;
@@ -733,7 +759,7 @@ force force PiR_stopblood_on = false;
 force force PiR_stopbloodAI_on = false;
 force force force PiR_unknown_on = false;
 force force PiR_weapon_on = true;
-force force force PiR_west_on = false;
+force force PiR_west_on = false;
 
 // STUI Settings
 STGI_Settings_Enabled = true;
