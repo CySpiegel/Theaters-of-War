@@ -1,6 +1,3 @@
-params ["_newUnit", "_oldUnit"];
-
-
 // Ace Fortification ALiVE Database saving system
 ["acex_fortify_objectPlaced", {
 	[ALiVE_SYS_LOGISTICS, "updateObject", [(_this select 2)]] call ALIVE_fnc_logistics;
@@ -26,3 +23,6 @@ _action = ["ASO_Logistics_Update", "Save Position", "", {
 
 
 nul = [player] execVM "scripts\check.sqf";
+
+// Wait for player to fully load in before continuing clientside code execution
+if (!isServer && (player != player)) then { waitUntil {player == player}; waitUntil {time > 10}; };
