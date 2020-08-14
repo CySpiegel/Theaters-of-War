@@ -47,6 +47,8 @@ Killing Friendlies or civilians will be penelised
 
 ["ALiVE | Theaters of War - Executing init.sqf..."] call ALiVE_fnc_Dump;
 
+// ACRE2 Radio Net Programming.........//
+_nop = [] execVM "scripts\radioNoFreq.sqf";
 
 //Disable VCOMAI on all vehicles if server and clients are running it.
 [{{Driver _x setvariable ["NOAI",true];} foreach (vehicles select {_x isKindOf 'air'});}, 1, []] call CBA_fnc_addPerFrameHandler;
