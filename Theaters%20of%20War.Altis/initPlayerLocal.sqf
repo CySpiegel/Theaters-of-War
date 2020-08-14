@@ -26,3 +26,8 @@ nul = [player] execVM "scripts\check.sqf";
 
 // Wait for player to fully load in before continuing clientside code execution
 if (!isServer && (player != player)) then { waitUntil {player == player}; waitUntil {time > 10}; };
+
+// start undercover system
+if (player getVariable ["isSneaky",false]) then {
+    [player] execVM "INC_undercover\Scripts\initUCR.sqf";
+};
