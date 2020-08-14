@@ -1,3 +1,7 @@
+author = "Cytreen Spiegel";
+onLoadName   = "Theaters of War | Altis";
+onLoadMission = "Welcome to the Altis Theater";
+
 class Header
 {
 	gameType = COOP;
@@ -68,6 +72,8 @@ class Extended_InitPost_EventHandlers {
 class CfgFunctions
 {
 	#include "INC_undercover\cfgFunctions.hpp"
+
+
 };
 
 class CfgRemoteExec
