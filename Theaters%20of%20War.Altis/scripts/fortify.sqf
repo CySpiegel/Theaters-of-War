@@ -90,6 +90,4 @@
 ["Land_Cargo40_sand_F", 5],
 ["Land_Cargo20_sand_F", 5],
 ["Land_ClutterCutter_large_F", 5],
-["Land_Sun_chair_green_F", 5]]] 
-
-call acex_fortify_fnc_registerObjects
+["Land_Sun_chair_green_F", 5]]]  call acex_fortify_fnc_registerObjects

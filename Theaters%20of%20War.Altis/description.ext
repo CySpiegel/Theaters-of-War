@@ -1,3 +1,9 @@
+#include "pxs_satcom_a3\init_interface.hpp"
+
+author = "Cytreen Spiegel";
+onLoadName   = "Theaters of War";
+onLoadMission = "Welcome to the Altis";
+
 class Header
 {
 	gameType = COOP;
@@ -28,19 +34,37 @@ forceRotorLibSimulation = 1;
 joinUnassigned = 1;
 corpseManagerMode = 1;
 corpseLimit = 30;
-corpseRemovalMinTime = 600;
-corpseRemovalMaxTime = 3600;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 120;
 wreckManagerMode = 1;
-wreckLimit = 20;
-wreckRemovalMinTime = 1200;
-wreckRemovalMaxTime = 7200;
-minPlayerDistance = 1000;
+wreckLimit = 16;
+wreckRemovalMinTime = 300;
+wreckRemovalMaxTime = 900;
+minPlayerDistance = 300;
+
+//R3F Logistics Start
+
+#include "R3F_LOG\desc_include.h"
 
 
+class ACEX_Fortify_Presets 
+{
+    class ASO_Fortify_Objects 
+	{
+        displayName = "MyPreset";
+
+        objects[] = 
+        {
+            {"Land_HBarrierWall6_F", 5},
+            {"Land_HBarrierWall_corner_F", 5},
+            {"Land_HBarrierWall_corridor_F", 5},
+            {"Land_HBarrierWall4_F", 5},
+        };
+    };
+};
 
 class Extended_InitPost_EventHandlers {
-    class CAManBase 
-    {
+    class CAManBase {
 		init = "_this call (compile preprocessFileLineNumbers 'postInitXEH.sqf')";
 	};
 };
@@ -48,6 +72,9 @@ class Extended_InitPost_EventHandlers {
 class CfgFunctions
 {
 	#include "INC_undercover\cfgFunctions.hpp"
+
+
+
 };
 
 class CfgRemoteExec

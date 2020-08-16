@@ -1,7 +1,7 @@
 // Disable arma save system
 enableSaving [false,false];
 
-
+execVM "R3F_LOG\init.sqf";
 
 /*  
 ACE Fortification budget system 
@@ -20,7 +20,8 @@ Killing Friendlies or civilians will be penelised
 		_sideUnit = _unit getVariable ["side_unit", sideUnknown];
 		if (_sideUnit isEqualTo sideUnknown) exitWith {};
 
-		_budget = switch(_sideUnit) do {
+		_budget = switch(_sideUnit) do
+		{
 			case west: { 0 };
 			case east: { 50 };
 			case resistance: 
@@ -52,10 +53,18 @@ Killing Friendlies or civilians will be penelised
 
 
 // ace fortification supplies
-execVM "scripts\fortify.sqf";
+//execVM "scripts\fortify.sqf";
 
 // ACRE2 Radio Net Programming.........//
 _nop = [] execVM "scripts\radioNoFreq.sqf";
 
 //Disable VCOMAI on all vehicles if server and clients are running it.
 [{{Driver _x setvariable ["NOAI",true];} foreach (vehicles select {_x isKindOf 'air'});}, 1, []] call CBA_fnc_addPerFrameHandler;
+
+
+// Sat Com
+_a1 = [] execVM "pxs_satcom_a3\init_satellite.sqf";
+sleep 0.2;
+//action
+SATTOP addAction ["<t color='#ff0066'>SATCOM</t>", {call PXS_startSatellite;}, "", 0, true, true, "", "_this == player"]; 
+//
