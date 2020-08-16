@@ -52,9 +52,6 @@ Killing Friendlies or civilians will be penelised
 ["ALiVE | Theaters of War - Executing init.sqf..."] call ALiVE_fnc_Dump;
 
 
-// ace fortification supplies
-//execVM "scripts\fortify.sqf";
-
 // ACRE2 Radio Net Programming.........//
 _nop = [] execVM "scripts\radioNoFreq.sqf";
 
@@ -62,7 +59,7 @@ _nop = [] execVM "scripts\radioNoFreq.sqf";
 [{{Driver _x setvariable ["NOAI",true];} foreach (vehicles select {_x isKindOf 'air'});}, 1, []] call CBA_fnc_addPerFrameHandler;
 
 
-// Sat Com
+// Satcom
 _a1 = [] execVM "pxs_satcom_a3\init_satellite.sqf";
 sleep 0.2;
 //action
