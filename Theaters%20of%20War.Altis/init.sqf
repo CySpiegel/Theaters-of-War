@@ -1,6 +1,8 @@
 // Disable arma save system
 enableSaving [false,false];
 
+
+
 /*  
 ACE Fortification budget system 
 
@@ -41,11 +43,16 @@ Killing Friendlies or civilians will be penelised
 	}];
 }] call CBA_fnc_addClassEventHandler;
 
+
 #ifndef execNow
 #define execNow call compile preprocessfilelinenumbers
 #endif
 
 ["ALiVE | Theaters of War - Executing init.sqf..."] call ALiVE_fnc_Dump;
+
+
+// ace fortification supplies
+execVM "scripts\fortify.sqf";
 
 // ACRE2 Radio Net Programming.........//
 _nop = [] execVM "scripts\radioNoFreq.sqf";
