@@ -6,7 +6,7 @@ if(isServer) then
 	{
 		if (_x isKindOf "B_SAM_System_02_F") then
 		{
-			[_x,4000]call addToIronDome;
+			[_x,4000] call addToIronDome;
 		};
 	} forEach vehicles;
 };

@@ -44,6 +44,16 @@ Killing Friendlies or civilians will be penelised
 	}];
 }] call CBA_fnc_addClassEventHandler;
 
+// call compile preprocessFileLineNumbers "scripts\ironDome.sqf";
+// if(isServer) then 
+// {
+// 	{
+// 		if (_x isKindOf "B_SAM_System_02_F") then
+// 		{
+// 			[_x,4000]call addToIronDome;
+// 		};
+// 	} forEach vehicles;
+// };
 
 #ifndef execNow
 #define execNow call compile preprocessfilelinenumbers
