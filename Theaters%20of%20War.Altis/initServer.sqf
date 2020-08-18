@@ -39,3 +39,7 @@ addMissionEventHandler ["HandleDisconnect",
 		deleteVehicle (_this select 0);
 	};
 }];
+
+
+// Civilian traffic System
+call compile preprocessFileLineNumbers "Engima\Traffic\Init.sqf";

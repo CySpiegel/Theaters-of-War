@@ -55,6 +55,11 @@ Killing Friendlies or civilians will be penelised
 // ACRE2 Radio Net Programming.........//
 _nop = [] execVM "scripts\radioNoFreq.sqf";
 
+// Sandsorms disable for altis
+//Sandstorm
+// [3, 7, 645] execvm "ROS\scripts\ROS_Sandstorm_Scheduler.sqf";
+
+
 //Disable VCOMAI on all vehicles if server and clients are running it.
 [{{Driver _x setvariable ["NOAI",true];} foreach (vehicles select {_x isKindOf 'air'});}, 1, []] call CBA_fnc_addPerFrameHandler;
 
