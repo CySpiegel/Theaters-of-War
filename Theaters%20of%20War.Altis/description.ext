@@ -55,10 +55,14 @@ class ACEX_Fortify_Presets
 
         objects[] = 
         {
-            {"Land_HBarrierWall6_F", 5},
-            {"Land_HBarrierWall_corner_F", 5},
-            {"Land_HBarrierWall_corridor_F", 5},
-            {"Land_HBarrierWall4_F", 5},
+            {"Land_BagFence_Long_F", 5},
+            {"Land_BagFence_Round_F", 5},
+            {"Land_SandbagBarricade_01_half_F", 5},
+            {"Land_SandbagBarricade_01_F", 5},
+            {"Land_SandbagBarricade_01_hole_F", 5},
+            {"Land_MedicalTent_01_NATO_generic_inner_F", 5},
+            {"Land_ClutterCutter_large_F", 5}
+            
         };
     };
 };
