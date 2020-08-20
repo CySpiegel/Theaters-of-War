@@ -437,7 +437,7 @@ force acex_field_rations_hungerSatiated = 1;
 force acex_field_rations_terrainObjectActions = true;
 force acex_field_rations_thirstQuenched = 1;
 force acex_field_rations_timeWithoutFood = 48;
-force acex_field_rations_timeWithoutWater = 3;
+force acex_field_rations_timeWithoutWater = 10;
 force acex_field_rations_waterSourceActions = 2;
 
 // ACEX Fortify
